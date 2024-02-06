@@ -8,25 +8,21 @@ const StartPage = () => {
   const { quizzes } = quizData;
 
   return (
-    <main className="min-h-screen bg-background flex flex-col items-center justify-center font-rubik p-4">
+    <main>
       {selectedSubject ? (
-        <>
-          <section>
-            <QuestionPage
-              setSelectedSubject={setSelectedSubject}
-              selectedSubject={selectedSubject}
-            />
-          </section>
-        </>
+        <QuestionPage
+          setSelectedSubject={setSelectedSubject}
+          selectedSubject={selectedSubject}
+        />
       ) : (
-        <>
+        <section className="min-h-screen bg-background flex flex-col items-center justify-center font-rubik p-4">
           <section className="flex flex-col-2 justify-between w-full max-w-[1160px] drop-shadow-3xl text-secondary font-rubik">
             <section className="md:w-1/2">
               <h1 className="text-4xl leading-[4rem] drop-shadow-3xl font-light mb-2">
                 Welcome to the
               </h1>
               <h2 className="text-4xl leading-[4rem] drop-shadow-3xl font-medium mb-12">
-                {`${selectedSubject ? selectedSubject : "Frontend"} Quiz!`}
+                Frontend Quiz!
               </h2>
               <p className="text-2xl leading-extra-loose font-normal italic">
                 Pick a subject to get started.
@@ -42,7 +38,7 @@ const StartPage = () => {
               ))}
             </section>
           </section>
-        </>
+        </section>
       )}
     </main>
   );
