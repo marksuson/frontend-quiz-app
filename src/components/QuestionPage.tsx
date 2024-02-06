@@ -91,7 +91,7 @@ const QuestionPage: React.FC<QuestionPageProps> = ({ selectedSubject }) => {
         />
       ) : (
         <section className="min-h-screen bg-background font-rubik p-4">
-          <header className="flex justify-start mb-[85px] ml-[140px] mt-10">
+          <header className="flex justify-start mb-12 ml-[140px] mt-10">
             <Header
               subject={subject?.title || ""}
               icon={subject?.icon || ""}
